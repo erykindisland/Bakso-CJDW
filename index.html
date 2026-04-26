@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bakso Tusuk CJDW. Enak, Kenyal, Nagih! Berdiri sejak tahun 2000. Tersedia untuk eceran dan peluang menjadi Agen Pemasar.">
+    <meta name="description" content="Bakso Tusuk CJDW. Enak, Kenyal, Nagih! Berdiri sejak tahun 2013. Tersedia untuk eceran dan peluang menjadi Agen Pemasar.">
     <title>Bakso Tusuk CJDW</title>
     
     <!-- Google Fonts -->
@@ -16,6 +16,8 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Review Mode -->
+    <link rel="stylesheet" href="review-mode.css">
 </head>
 <body>
 
@@ -42,7 +44,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content" data-reveal="bottom">
-            <h2 class="est">Established 2000</h2>
+            <h2 class="est">Established 2013</h2>
             <h1>BAKSO TUSUK <span class="highlight">CJDW</span></h1>
 
             <div class="hero-badges">
@@ -56,7 +58,7 @@
             </div>
         </div>
         <div class="hero-image" data-reveal="fade">
-            <img src="poster_utama.jpg" alt="Bakso Tusuk CJDW Poster" id="hero-img-main">
+            <img src="Assets/poster_utama.jpg" alt="Bakso Tusuk CJDW Poster" id="hero-img-main">
         </div>
     </section>
 
@@ -87,8 +89,8 @@
             <div class="about-grid">
                 <div class="about-text" data-reveal="left">
                     <span class="sub-title">Tentang Kami</span>
-                    <h2>Kualitas yang Terjaga Sejak Tahun 2000</h2>
-                    <p>Bakso Tusuk CJDW telah melayani pecinta kuliner selama lebih dari dua dekade. Kami percaya bahwa camilan murah pun harus memiliki rasa yang mewah.</p>
+                    <h2>Kualitas yang Terjaga Sejak Tahun 2013</h2>
+                    <p>Bakso Tusuk CJDW telah melayani pecinta kuliner selama lebih dari satu dekade. Kami percaya bahwa camilan murah pun harus memiliki rasa yang mewah.</p>
                     <div class="about-points">
                         <div class="point"><i class="fas fa-users"></i> Cocok untuk semua kalangan</div>
                         <div class="point"><i class="fas fa-smile"></i> Satu tusuk, kepuasan di mulut</div>
@@ -96,8 +98,8 @@
                     </div>
                 </div>
                 <div class="about-image video-wrapper" data-reveal="right">
-                    <video controls poster="thumbnail_proses.jpg" style="width: 100%; border-radius: 30px; box-shadow: var(--shadow); aspect-ratio: 9/16; object-fit: cover;">
-                        <source src="video-bakso.mp4" type="video/mp4">
+                    <video controls poster="Assets/thumbnail_proses.jpg" style="width: 100%; border-radius: 30px; box-shadow: var(--shadow); aspect-ratio: 9/16; object-fit: cover;">
+                        <source src="Assets/video-bakso.mp4" type="video/mp4">
                     </video>
                     <div class="video-overlay"><i class="fas fa-play"></i></div>
                 </div>
@@ -114,18 +116,18 @@
             </div>
             <div class="product-gallery">
                 <div class="product-card" data-reveal="bottom">
-                    <img src="eceran.jpg" alt="Bakso Eceran">
+                    <img src="Assets/eceran.jpg" alt="Bakso Eceran">
                     <div class="card-info">
                         <h3>Bakso Eceran</h3>
-                        <p>Rp 1.000 / Tusuk</p>
+                        <p>Tersedia isi 60 perpack</p>
                         <span class="badge">Favorit</span>
                     </div>
                 </div>
                 <div class="product-card" data-reveal="bottom" data-delay="100">
-                    <img src="frozen.jpg" alt="Paket Frozen">
+                    <img src="Assets/frozen.jpg" alt="Paket Frozen">
                     <div class="card-info">
                         <h3>Paket Frozen</h3>
-                        <p>Tersedia Isi 25 (Polos)</p>
+                        <p>Tersedia isi 60 perpack</p>
                         <span class="badge">Praktis</span>
                     </div>
                 </div>
@@ -143,8 +145,8 @@
             </div>
             <div class="video-container video-wrapper" data-reveal="zoom">
                 <!-- Option 1: Local Video (Recommended for short loops) -->
-                <video controls poster="poster_utama.jpg" class="main-video">
-                    <source src="video-bakso.mp4" type="video/mp4">
+                <video controls poster="Assets/poster_utama.jpg" class="main-video">
+                    <source src="Assets/video-bakso.mp4" type="video/mp4">
                     Browser Anda tidak mendukung tag video.
                 </video>
                 <div class="video-overlay"><i class="fas fa-play"></i></div>
@@ -176,7 +178,7 @@
             <div class="footer-grid">
                 <div class="footer-info">
                     <h3>Bakso Tusuk <span class="red">CJDW</span></h3>
-                    <p>Est. 2000</p>
+                    <p>Est. 2013</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navigasi</h4>
@@ -202,6 +204,8 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Review Mode JS -->
+    <script src="review-mode.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>

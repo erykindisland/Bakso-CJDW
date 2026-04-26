@@ -464,6 +464,9 @@ img {
 .footer ul li { margin-bottom: 10px; }
 .footer ul li a { color: #888; }
 .footer ul li a:hover { color: var(--primary); }
+.footer-wa-link { color: #888; display: flex; align-items: center; gap: 8px; }
+.footer-wa-link:hover { color: var(--primary); }
+
 
 .footer-bottom {
     border-top: 1px solid #222;
