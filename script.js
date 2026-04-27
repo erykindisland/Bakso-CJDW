@@ -3,52 +3,69 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Mobile Menu Toggle ---
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
-    const links = document.querySelectorAll('.nav-links li');
+    const body = document.body;
 
-    hamburger.addEventListener('click', () => {
+    const toggleMenu = () => {
         navLinks.classList.toggle('active');
         hamburger.classList.toggle('active');
-    });
+        // Prevent body scroll when menu is open
+        body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+    };
+
+    hamburger.addEventListener('click', toggleMenu);
 
     // Close menu when link is clicked
-    links.forEach(link => {
+    document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
             hamburger.classList.remove('active');
+            body.style.overflow = 'auto';
         });
     });
 
-    // --- Navbar Sticky Effect ---
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header');
-        header.classList.toggle('sticky', window.scrollY > 0);
-    });
-
-    // --- Reveal on Scroll ---
-    const revealElements = document.querySelectorAll('[data-reveal]');
-
-    const revealOnScroll = () => {
-        const triggerBottom = window.innerHeight / 5 * 4;
-
-        revealElements.forEach(el => {
-            const elTop = el.getBoundingClientRect().top;
-            const delay = el.getAttribute('data-delay') || 0;
-
-            if (elTop < triggerBottom) {
-                setTimeout(() => {
-                    el.classList.add('active');
-                }, delay);
-            }
-        });
+    // --- High Performance Reveal on Scroll ---
+    const revealOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
     };
 
-    // Initial check
-    revealOnScroll();
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // Optional: Stop observing after reveal for better performance
+                observer.unobserve(entry.target);
+            }
+        });
+    }, revealOptions);
 
-    // Scroll event listener
-    window.addEventListener('scroll', revealOnScroll);
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+        revealObserver.observe(el);
+    });
 
-    // --- Smooth Scrolling for all internal links ---
+    // --- Active Nav Link (Scroll Spy) ---
+    const sections = document.querySelectorAll('section[id]');
+    const scrollSpyOptions = {
+        threshold: 0.5,
+        rootMargin: "-70px 0px 0px 0px"
+    };
+
+    const scrollSpyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.style.color = link.getAttribute('href') === `#${id}` 
+                        ? 'var(--secondary)' 
+                        : 'var(--dark)';
+                });
+            }
+        });
+    }, scrollSpyOptions);
+
+    sections.forEach(section => scrollSpyObserver.observe(section));
+
+    // --- Smooth Scrolling ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -56,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                const headerOffset = 80;
+                const headerOffset = 70;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -67,35 +84,31 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    
-    // Check if images are working, if not use a fallback color
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-        img.addEventListener('error', function() {
-            this.style.backgroundColor = '#ddd';
-            this.style.display = 'flex';
-            this.style.alignItems = 'center';
-            this.style.justifyContent = 'center';
-            console.log('Image failed to load:', this.src);
-        });
-    });
-    // --- Video Replay Feature (Show poster and overlay again when ended) ---
-    const videoWrappers = document.querySelectorAll('.video-wrapper');
-    
-    videoWrappers.forEach(wrapper => {
-        const video = wrapper.querySelector('video');
+
+    // --- Video Logic ---
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+        const wrapper = video.closest('.video-wrapper');
         
         video.addEventListener('play', () => {
-            wrapper.classList.add('playing');
+            if (wrapper) wrapper.classList.add('playing');
         });
         
         video.addEventListener('pause', () => {
-            wrapper.classList.remove('playing');
+            if (wrapper) wrapper.classList.remove('playing');
         });
 
         video.addEventListener('ended', function() {
-            wrapper.classList.remove('playing');
-            this.load(); // Resets to poster (thumbnail)
+            if (wrapper) wrapper.classList.remove('playing');
+            this.load(); 
+        });
+    });
+
+    // Fallback for missing images
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', function() {
+            this.style.background = '#f0f0f0';
+            this.alt = 'Image pending...';
         });
     });
 });

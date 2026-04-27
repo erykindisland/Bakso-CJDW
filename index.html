@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bakso Tusuk CJDW. Enak, Kenyal, Nagih! Berdiri sejak tahun 2013. Tersedia untuk eceran dan peluang menjadi Agen Reseller.">
-    <title>Bakso Tusuk CJDW</title>
+    <title>Bakso Tusuk CJDW | Enak, Kenyal, Nagih!</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,42 +43,45 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content" data-reveal="bottom">
+        <div class="hero-content" data-reveal="up">
             <h2 class="est">Established 2013</h2>
             <h1>BAKSO TUSUK <span class="highlight">CJDW</span></h1>
+            <p class="tagline">ENAK, KENYAL, NAGIH!</p>
 
             <div class="hero-badges">
-                <span><i class="fas fa-check-circle"></i> Enak</span>
-                <span><i class="fas fa-check-circle"></i> Kenyal</span>
-                <span><i class="fas fa-check-circle"></i> Nagih</span>
+                <span><i class="fas fa-check-circle"></i> Bahan Segar</span>
+                <span><i class="fas fa-check-circle"></i> Resep Asli</span>
+                <span><i class="fas fa-check-circle"></i> Halal</span>
             </div>
             <div class="hero-cta">
                 <a href="#products" class="btn btn-primary">Lihat Menu</a>
                 <a href="https://wa.me/628881211529" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Pesan Sekarang</a>
             </div>
         </div>
-        <div class="hero-image" data-reveal="fade">
+        <div class="hero-image" data-reveal="zoom">
             <img src="Assets/poster_utama.jpg" alt="Bakso Tusuk CJDW Poster" id="hero-img-main">
         </div>
     </section>
 
-    <!-- Stats / Features Section -->
+    <!-- Features Section -->
     <section class="features">
         <div class="container">
-            <div class="feature-item" data-reveal="bottom">
-                <div class="icon"><i class="fas fa-drumstick-bite"></i></div>
-                <h3>Bakso Pilihan</h3>
-                <p>Daging berkualitas dengan cita rasa juara di setiap tusukannya.</p>
-            </div>
-            <div class="feature-item" data-reveal="bottom" data-delay="100">
-                <div class="icon"><i class="fas fa-fire-alt"></i></div>
-                <h3>Kuah Gurih</h3>
-                <p>Kaldu sedap yang bikin ketagihan, diracik dengan bumbu rahasia.</p>
-            </div>
-            <div class="feature-item" data-reveal="bottom" data-delay="200">
-                <div class="icon"><i class="fas fa-wallet"></i></div>
-                <h3>Harga Sahabat</h3>
-                <p>Mulai dari Rp 1.000 per tusuk. Murah meriah, kenyang maksimal!</p>
+            <div class="features-grid">
+                <div class="feature-item" data-reveal="up">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <h3>Bakso Pilihan</h3>
+                    <p>Daging berkualitas dengan cita rasa juara di setiap tusukannya.</p>
+                </div>
+                <div class="feature-item" data-reveal="up">
+                    <i class="fas fa-fire-alt"></i>
+                    <h3>Kuah Gurih</h3>
+                    <p>Kaldu sedap yang bikin ketagihan, diracik dengan bumbu rahasia.</p>
+                </div>
+                <div class="feature-item" data-reveal="up">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Harga Sahabat</h3>
+                    <p>Mulai dari Rp 1.000 per tusuk. Murah meriah, kenyang maksimal!</p>
+                </div>
             </div>
         </div>
     </section>
@@ -87,9 +90,9 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-grid">
-                <div class="about-text" data-reveal="left">
-                    <span class="sub-title">Tentang Kami</span>
-                    <h2>Kualitas yang Terjaga Sejak Tahun 2013</h2>
+                <div class="about-text" data-reveal="up">
+                    <span class="badge">Tentang Kami</span>
+                    <h2>Kualitas yang Terjaga Sejak <span class="highlight">Tahun 2013</span></h2>
                     <p>Bakso Tusuk CJDW telah melayani pecinta kuliner selama lebih dari satu dekade. Kami percaya bahwa camilan murah pun harus memiliki rasa yang mewah.</p>
                     <div class="about-points">
                         <div class="point"><i class="fas fa-users"></i> Cocok untuk semua kalangan</div>
@@ -97,11 +100,10 @@
                         <div class="point"><i class="fas fa-medal"></i> Bahan baku segar setiap hari</div>
                     </div>
                 </div>
-                <div class="about-image video-wrapper" data-reveal="right">
-                    <video controls poster="Assets/thumbnail_proses.jpg" style="width: 100%; border-radius: 30px; box-shadow: var(--shadow); aspect-ratio: 9/16; object-fit: cover;">
+                <div class="about-image video-wrapper" data-reveal="zoom">
+                    <video controls poster="Assets/thumbnail_proses.jpg" style="width: 100%; border-radius: 30px; box-shadow: var(--shadow-lg); aspect-ratio: 9/16; object-fit: cover;">
                         <source src="Assets/video-bakso.mp4" type="video/mp4">
                     </video>
-                    <div class="video-overlay"><i class="fas fa-play"></i></div>
                 </div>
             </div>
         </div>
@@ -110,12 +112,12 @@
     <!-- Product Showcase -->
     <section id="products" class="products">
         <div class="container">
-            <div class="section-title">
-                <h2>Camilan Murah <span class="red-text">Rasa Mewah</span></h2>
-                <div class="divider"></div>
+            <div class="section-header" data-reveal="up">
+                <span class="badge">Daftar Menu</span>
+                <h2>Camilan Murah <span class="logo-red">Rasa Mewah</span></h2>
             </div>
             <div class="product-gallery">
-                <div class="product-card" data-reveal="bottom">
+                <div class="product-card" data-reveal="up">
                     <img src="Assets/eceran.jpg" alt="Bakso Eceran">
                     <div class="card-info">
                         <h3>Bakso Eceran</h3>
@@ -123,7 +125,7 @@
                         <span class="badge">Favorit</span>
                     </div>
                 </div>
-                <div class="product-card" data-reveal="bottom" data-delay="100">
+                <div class="product-card" data-reveal="up">
                     <img src="Assets/frozen.jpg" alt="Paket Frozen">
                     <div class="card-info">
                         <h3>Paket Frozen</h3>
@@ -135,28 +137,18 @@
         </div>
     </section>
 
-    <!-- Video Section -->
-    <section id="video" class="video-showcase">
+    <!-- Video Showcase (Production) -->
+    <section class="video-showcase">
         <div class="container">
-            <div class="section-title">
-                <h2>Video <span class="red-text">Proses Produksi</span></h2>
-                <div class="divider"></div>
-                <p>Proses pembuatan dan penyajian Bakso Tusuk CJDW yang selalu higienis dan nikmat.</p>
+            <div class="section-header" data-reveal="up">
+                <span class="badge">Proses Kami</span>
+                <h2>Lihat <span class="logo-red">Dapur Kami</span></h2>
+                <p>Kami menjaga higienitas dan kualitas rasa di setiap prosesnya.</p>
             </div>
-            <div class="video-container video-wrapper" data-reveal="zoom">
-                <!-- Option 1: Local Video (Recommended for short loops) -->
+            <div class="video-container" data-reveal="zoom">
                 <video controls poster="Assets/poster_utama.jpg" class="main-video">
                     <source src="Assets/video-bakso.mp4" type="video/mp4">
-                    Browser Anda tidak mendukung tag video.
                 </video>
-                <div class="video-overlay"><i class="fas fa-play"></i></div>
-                
-                <!-- Option 2: YouTube Embed (Remove Option 1 if using this) -->
-                <!-- 
-                <div class="video-responsive">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_ANDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div> 
-                -->
             </div>
         </div>
     </section>
@@ -165,23 +157,24 @@
     <section id="agent" class="agency">
         <div class="container">
             <div class="agency-box" data-reveal="zoom">
+                <span class="badge" style="background: var(--white);">Join Us</span>
                 <h2>Buka Peluang Usaha!</h2>
-                <p>Kami menerima <strong>Agen Reseller Baru</strong>. Jika lokasi dan ketentuan lainnya kami setujui, Anda bisa menjadi bagian dari jaringan kami.</p>
-                <a href="https://wa.me/628881211529?text=Halo,%20saya%20tertarik%20menjadi%20agen%20pemasar%20Bakso%20CJDW" class="btn btn-yellow">Daftar Agen Reseller Sekarang</a>
+                <p>Kami menerima <strong>Agen Reseller Baru</strong>. Jadilah bagian dari jaringan bisnis kami yang sukses berkembang sejak 2013.</p>
+                <a href="https://wa.me/628881211529?text=Halo,%20saya%20tertarik%20menjadi%20agen%20reseller%20Bakso%20CJDW" class="btn btn-yellow">Hubungi Admin Reseller</a>
             </div>
         </div>
     </section>
 
     <!-- Location section -->
-    <section id="location" class="location section-padding">
+    <section id="location" class="location">
         <div class="container">
-            <div class="section-header" data-reveal="down">
+            <div class="section-header" data-reveal="up">
                 <span class="badge">Lokasi Kami</span>
-                <h2>Kunjungi <span class="red">Kantor Kami</span></h2>
-                <p><strong>CV. CJDW JAYA ABADI</strong> - Dapur Produksi Bakso Tusuk CJDW</p>
-                <p style="margin-top: 10px;"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/628881211529" target="_blank" style="color: inherit; text-decoration: none;">0888 1211 529</a></p>
+                <h2>Kunjungi <span class="logo-red">Pusat Produksi</span></h2>
+                <p><strong>CV. CJDW JAYA ABADI</strong></p>
+                <p style="margin-top: 10px;"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/628881211529" target="_blank" style="color: inherit; text-decoration: none; font-weight: 800;">0888 1211 529</a></p>
             </div>
-            <div class="map-container" data-reveal="up">
+            <div class="map-container" data-reveal="zoom">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.381!2d106.397!3d-6.215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e42038f2056a1a1%3A0x28f6e1873a489f57!2sDapur%20bakso%20CJDW!5e0!3m2!1sid!2sid!4v1714210000000!5m2!sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
@@ -192,8 +185,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-info">
-                    <h3>Bakso Tusuk <span class="red">CJDW</span></h3>
-                    <p>Est. 2013</p>
+                    <div class="logo" style="margin-bottom: 1rem;">
+                        <span class="logo-red">CJDW</span><span class="logo-text" style="color:white">BAKSO</span>
+                    </div>
+                    <p>Produksi bakso tusuk berkualitas sejak tahun 2013.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navigasi</h4>
@@ -209,7 +204,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Bakso Tusuk CJDW. All rights reserved.</p>
+                <p>&copy; 2024 Bakso Tusuk CJDW. Terjaga Kualitasnya Sejak 2013.</p>
             </div>
         </div>
     </footer>
