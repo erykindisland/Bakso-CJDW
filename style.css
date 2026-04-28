@@ -356,6 +356,21 @@ section {
     overflow: hidden;
     background: var(--dark);
     box-shadow: var(--shadow-lg);
+    display: flex;
+    justify-content: center;
+}
+
+.main-video {
+    width: 100%;
+    max-height: 85vh;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+video {
+    max-width: 100%;
+    outline: none;
 }
 
 /* Agency Box */
