@@ -130,7 +130,7 @@
                 message += `${i+1}. [${c.selector}]\n   Catatan: ${c.text}\n\n`;
             });
             
-            const waUrl = `https://wa.me/628881211529?text=${encodeURIComponent(message)}`;
+            const waUrl = `https://wa.me/6289505534864?text=${encodeURIComponent(message)}`;
             window.open(waUrl, '_blank');
         });
 
