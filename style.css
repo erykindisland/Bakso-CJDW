@@ -228,14 +228,11 @@ section {
     width: 90%;
     max-width: 600px;
     border-radius: 30px;
-    transform: rotate(2deg);
-    box-shadow: 30px 30px 60px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
     transition: var(--transition);
 }
 
-.hero-image img:hover {
-    transform: rotate(0deg) scale(1.02);
-}
+
 
 /* --- Cards & Content Sections --- */
 .section-header {
