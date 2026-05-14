@@ -111,4 +111,29 @@ document.addEventListener('DOMContentLoaded', () => {
             this.alt = 'Image pending...';
         });
     });
+    // --- Promo Pop-up Modal Logic ---
+    const promoModal = document.getElementById('promoModal');
+    const closePromo = document.getElementById('closePromo');
+
+    if (promoModal) {
+        // Show modal with a slight delay
+        setTimeout(() => {
+            promoModal.classList.add('active-display');
+            setTimeout(() => {
+                promoModal.classList.add('show');
+            }, 10);
+        }, 1500);
+
+        const closeModalFunc = () => {
+            promoModal.classList.remove('show');
+            setTimeout(() => {
+                promoModal.classList.remove('active-display');
+            }, 500);
+        };
+
+        if (closePromo) closePromo.addEventListener('click', closeModalFunc);
+        promoModal.addEventListener('click', (e) => {
+            if (e.target === promoModal) closeModalFunc();
+        });
+    }
 });
