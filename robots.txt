@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://bakso-cjdw-jayaabadi.barokahabadi.web.id/sitemap.xml
